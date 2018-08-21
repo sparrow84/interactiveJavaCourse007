@@ -130,10 +130,13 @@ public class GameBoard extends JFrame {
     boolean isFull() {
         boolean result = true;
 
+        A1:
         for (int i = 0; i < dimension; i++) {
             for (int j = 0; j < dimension; j++) {
-                if (gameField[i][j] == nullSymbol)
+                if (gameField[i][j] == nullSymbol) {
                     result = false;
+                    break A1;
+                }
             }
         }
         return result;
@@ -171,7 +174,9 @@ public class GameBoard extends JFrame {
             if (result) break;
         }
 
+        // qwe
         return result;
+        //return false;
     }
 
     /**
